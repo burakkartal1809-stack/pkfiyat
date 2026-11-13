@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101828">
+<meta name="description" content="Marka ve modele göre peşine kontrat cihaz fiyatlarını kolayca sorgulayın.">
+<title>PKFiyat | Cihaz Fiyat Sorgulama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">PK</span><span>PK<span class="brand-blue">FİYAT</span><small>CIHAZ FİYAT SORGULAMA</small></span></a>
+  <span class="live"><i></i> FİYAT LİSTESİ</span>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow"><span></span> HIZLI · KOLAY · GÜNCEL</div>
+    <h1>Aradığın cihazın<br><em>fiyatı burada.</em></h1>
+    <p>Marka, model veya cihaz kodunu yaz. Fiyat bilgisine saniyeler içinde ulaş.</p>
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input id="search" type="search" placeholder="Örn. iPhone 13, Samsung S25, IPH617..." autocomplete="off" aria-label="Marka, model veya cihaz kodu ara">
+      <button id="clear" class="clear" aria-label="Aramayı temizle" hidden>×</button>
+    </div>
+    <div class="search-hint">Marka, model, hafıza, renk veya cihaz koduyla arayabilirsin.</div>
+  </section>
+
+  <section class="content">
+    <div class="section-head">
+      <div><div class="eyebrow dark">ÜRÜN KATALOĞU</div><h2>Cihazlar</h2></div>
+      <div class="result-count" id="count">Ürünler yükleniyor…</div>
+    </div>
+    <div class="filters">
+      <label class="select-label">Marka
+        <select id="brandFilter"><option value="">Tüm markalar</option></select>
+      </label>
+      <label class="select-label">Sırala
+        <select id="sort">
+          <option value="relevance">Önerilen</option>
+          <option value="low">Fiyat: düşükten yükseğe</option>
+          <option value="high">Fiyat: yüksekten düşüğe</option>
+          <option value="az">Marka: A–Z</option>
+        </select>
+      </label>
+    </div>
+    <div id="results" class="results" aria-live="polite"></div>
+    <div id="empty" class="empty" hidden><div class="empty-icon">⌕</div><h3>Ürün bulunamadı</h3><p>Arama kelimeni değiştirebilir veya marka filtresini temizleyebilirsin.</p></div>
+    <div class="disclaimer">Gösterilen fiyatlar yüklenen fiyat listesindeki aboneye kesilecek cihaz bedelleridir. İşlem öncesinde güncel listeyi teyit edin.</div>
+  </section>
+</main>
+<footer><span class="footer-logo">PKFİYAT</span><span>© <span id="year"></span> PKFiyat · Cihaz fiyat sorgulama</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
