@@ -37,3 +37,20 @@ footer{border-top:1px solid var(--line);padding:23px max(5vw,22px);display:flex;
 .footer-logo{font-weight:800;letter-spacing:1px;color:#536baf}
 @media(max-width:850px){.results{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.topbar{height:66px}.hero{padding:58px 18px 50px}h1{letter-spacing:-1.8px}.hero p{font-size:13px}.search-wrap{height:56px;padding:0 13px}.search-wrap input{font-size:13px}.content{padding:36px 16px 50px}.results{grid-template-columns:1fr}.filters{gap:8px}.select-label{flex:1;min-width:0}select{min-width:0;width:100%}.section-head{align-items:center}h2{font-size:24px}footer{gap:12px;flex-wrap:wrap}}
+
+.mode-switch{display:flex;gap:8px;margin:0 0 8px;padding:5px;background:#f0f2f7;border-radius:12px;width:max-content;max-width:100%}
+.mode-button{border:0;background:transparent;color:#667085;border-radius:9px;padding:11px 17px;font:700 12px "DM Sans",sans-serif;cursor:pointer;transition:.18s}
+.mode-button.active{background:#fff;color:#172b58;box-shadow:0 2px 8px #10182812}
+.mode-description{font-size:11px;color:#98a2b3;margin:0 0 20px}
+.mode-tag{font-size:9px;font-weight:800;letter-spacing:.5px;color:#087443;background:#ecfdf3;padding:6px 8px;border-radius:5px}
+.temlik-offers{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:8px;margin-top:14px}
+.temlik-offer{border:1px solid #e8ebf1;border-radius:10px;padding:10px;background:#fbfcff;min-width:0}
+.offer-term{font-size:9px;font-weight:800;letter-spacing:.7px;color:#5269a8;margin-bottom:6px}
+.offer-monthly{font-size:18px;font-weight:800;letter-spacing:-.6px;color:#087443;white-space:nowrap}
+.offer-monthly small{font-size:9px;font-weight:600;color:#667085;letter-spacing:0;margin-left:3px}
+.offer-total{display:flex;flex-direction:column;gap:3px;border-top:1px solid #e8ebf1;margin-top:8px;padding-top:7px}
+.offer-total span{font-size:9px;color:#98a2b3}
+.offer-total strong{font-size:12px;color:#172b58}
+.offer-meta{font-size:9px;color:#98a2b3;margin-top:6px}
+.temlik-foot{font-size:9px;color:#98a2b3;margin-top:10px;line-height:1.5;display:flex;flex-direction:column;gap:3px;overflow-wrap:anywhere}
+@media(max-width:560px){.mode-switch{width:100%}.mode-button{flex:1;padding:11px 8px;font-size:11px}.temlik-offers{grid-template-columns:repeat(2,minmax(0,1fr))}}

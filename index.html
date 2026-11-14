@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101828">
-<meta name="description" content="Marka ve modele göre peşine kontrat cihaz fiyatlarını kolayca sorgulayın.">
+<meta name="description" content="Peşine kontrat ve faturaya ek cihaz fiyatlarını kolayca sorgulayın.">
 <title>PKFiyat | Cihaz Fiyat Sorgulama</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +28,16 @@
     </div>
     <div class="search-hint">Marka, model, hafıza, renk veya cihaz koduyla arayabilirsin.</div>
   </section>
-
   <section class="content">
     <div class="section-head">
       <div><div class="eyebrow dark">ÜRÜN KATALOĞU</div><h2>Cihazlar</h2></div>
       <div class="result-count" id="count">Ürünler yükleniyor…</div>
     </div>
+    <div class="mode-switch" role="group" aria-label="Fiyat türü">
+      <button id="modePesine" class="mode-button active" type="button" aria-pressed="true">Peşine Kontrat</button>
+      <button id="modeTemlik" class="mode-button" type="button" aria-pressed="false">Temlik / Faturaya Ek</button>
+    </div>
+    <div id="modeDescription" class="mode-description">Peşine kontrat fiyatlarını görüntülüyorsun.</div>
     <div class="filters">
       <label class="select-label">Marka
         <select id="brandFilter"><option value="">Tüm markalar</option></select>
@@ -41,15 +45,15 @@
       <label class="select-label">Sırala
         <select id="sort">
           <option value="relevance">Önerilen</option>
-          <option value="low">Fiyat: düşükten yükseğe</option>
-          <option value="high">Fiyat: yüksekten düşüğe</option>
+          <option value="low">Aylık fiyat: düşükten yükseğe</option>
+          <option value="high">Aylık fiyat: yüksekten düşüğe</option>
           <option value="az">Marka: A–Z</option>
         </select>
       </label>
     </div>
     <div id="results" class="results" aria-live="polite"></div>
     <div id="empty" class="empty" hidden><div class="empty-icon">⌕</div><h3>Ürün bulunamadı</h3><p>Arama kelimeni değiştirebilir veya marka filtresini temizleyebilirsin.</p></div>
-    <div class="disclaimer">Gösterilen fiyatlar yüklenen fiyat listesindeki aboneye kesilecek cihaz bedelleridir. İşlem öncesinde güncel listeyi teyit edin.</div>
+    <div class="disclaimer">Faturaya ek fiyatlarında aylık taksit ve aboneye kesilecek toplam temlik faturası ayrı gösterilir. İşlem öncesinde güncel listeyi teyit edin.</div>
   </section>
 </main>
 <footer><span class="footer-logo">PKFİYAT</span><span>© <span id="year"></span> PKFiyat · Cihaz fiyat sorgulama</span></footer>
